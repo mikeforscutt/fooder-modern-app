@@ -1,6 +1,6 @@
 import icons from "url:../../img/icons.svg";
 import { Fraction } from "fractional";
-console.log(Fraction);
+
 export class RecipeView {
   #parentElement = document.querySelector(".recipe");
   #data;
@@ -46,7 +46,7 @@ export class RecipeView {
     this.#parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
-  renderMessage(message = this.#Message) {
+  renderMessage(message = this.#message) {
     const markup = `
     <div class="message">
             <div>
