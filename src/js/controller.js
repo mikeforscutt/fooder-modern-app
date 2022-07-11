@@ -33,6 +33,7 @@ const controlRecipes = async function () {
 
     // 3) Rendering recipe
     recipeView.render(model.state.recipe);
+    console.log("yooo", model.state.recipe);
   } catch (err) {
     recipeView.renderError();
 
@@ -97,10 +98,16 @@ const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
-const controlAddRecipe = function (newRecipe) {
-  console.log(newRecipe);
+const controlAddRecipe = async function (newRecipe) {
+  try {
+    // Upload the new recipe data
+    await model.uploadRecipe(newRecipe);
 
-  // Upload the new recipe data
+    console.log(model.state.recipe);
+  } catch (err) {
+    console.error("… error", err);
+    addRecipeView.renderError(err.message);
+  }
 };
 
 const init = function () {
