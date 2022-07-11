@@ -1,0 +1,29 @@
+{
+  "name": "fooder",
+  "version": "1.0.0",
+  "description": "Recipe / Meal choice application",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeforscutt/fooder-modern-app.git"
+  },
+  "author": "Mike Forscutt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeforscutt/fooder-modern-app/issues"
+  },
+  "homepage": "https://github.com/mikeforscutt/fooder-modern-app#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0"
+  },
+  "dependencies": {
+    "core-js": "^3.22.8",
+    "fractional": "^1.0.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
